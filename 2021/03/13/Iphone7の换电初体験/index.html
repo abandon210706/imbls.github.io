@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CAmatic+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="我的i7从使用到现在已经4年多了，他像一位老伙计一样，默默地陪伴着我，任劳任怨的受着我疯狂揉拧，眼见着他的身体逐渐被掏空（让我莫名想起了那个让男人看了都会流泪的广告），我内心很是不舍，所以这次决定给他更换一下零部件。该从哪里开始呢？当然是电池啦，好比男人的加油站（手动滑稽）。好了，回归正题，以下内容主要记录换电过程以及一些需要注意的点，还有换电之后的使用感受。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Iphone7の换电初体験">
+<meta property="og:url" content="http://example.com/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/index.html">
+<meta property="og:site_name" content="A-CODE-WALL">
+<meta property="og:description" content="我的i7从使用到现在已经4年多了，他像一位老伙计一样，默默地陪伴着我，任劳任怨的受着我疯狂揉拧，眼见着他的身体逐渐被掏空（让我莫名想起了那个让男人看了都会流泪的广告），我内心很是不舍，所以这次决定给他更换一下零部件。该从哪里开始呢？当然是电池啦，好比男人的加油站（手动滑稽）。好了，回归正题，以下内容主要记录换电过程以及一些需要注意的点，还有换电之后的使用感受。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/b8583cfafdac4d4f906523fc22f3816f.jpg">
+<meta property="og:image" content="http://example.com/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/62928d230b8808c7a0f00bb4591408d.jpg">
+<meta property="og:image" content="http://example.com/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/ba265efade2c43d7ade4f93bd27eebfc.jpg">
+<meta property="article:published_time" content="2021-03-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-03-19T14:23:28.474Z">
+<meta property="article:author" content="blues">
+<meta property="article:tag" content="Iphone">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/b8583cfafdac4d4f906523fc22f3816f.jpg">
+
+
+<link rel="canonical" href="http://example.com/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>Iphone7の换电初体験 | A-CODE-WALL</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="A-CODE-WALL" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">A-CODE-WALL</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8D%A2%E7%94%B5%E3%81%AEStep-one"><span class="nav-number">1.</span> <span class="nav-text">换电のStep one</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8D%A2%E7%94%B5%E3%81%AEStep-two"><span class="nav-number">2.</span> <span class="nav-text">换电のStep two</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E5%B1%8F%E5%B9%95%E5%92%8C%E8%83%8C%E6%9D%BF%E5%88%86%E7%A6%BB%EF%BC%9F"><span class="nav-number">2.1.</span> <span class="nav-text">如何将屏幕和背板分离？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%A7%E4%B8%8B%E8%9E%BA%E4%B8%9D%EF%BC%8C%E6%96%AD%E5%BC%80%E6%8E%92%E7%BA%BF%EF%BC%8C%E5%BD%BB%E5%BA%95%E5%88%86%E7%A6%BB%E5%B1%8F%E5%B9%95%E5%92%8C%E8%83%8C%E6%9D%BF"><span class="nav-number">2.2.</span> <span class="nav-text">拧下螺丝，断开排线，彻底分离屏幕和背板</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8D%A2%E7%94%B5%E3%81%AEStep-three"><span class="nav-number">3.</span> <span class="nav-text">换电のStep three</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%86%E4%B8%8B%E9%9C%87%E5%8A%A8%E6%A8%A1%E7%BB%84%EF%BC%8C%E5%8D%B8%E4%B8%8B%E7%94%B5%E6%BA%90"><span class="nav-number">3.1.</span> <span class="nav-text">拆下震动模组，卸下电源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8D%A2%E7%94%B5%E3%81%AEStep-four"><span class="nav-number">4.</span> <span class="nav-text">换电のStep four</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%BF%E5%87%BA%E6%96%B0%E7%94%B5%E6%BA%90%EF%BC%8C%E7%B2%98%E4%B8%8A%E6%96%B0%E7%9A%84%E7%94%B5%E6%BA%90%E8%83%B6%EF%BC%8C%E9%BB%8F%E4%B8%8A%E8%83%8C%E6%9D%BF"><span class="nav-number">4.1.</span> <span class="nav-text">拿出新电源，粘上新的电源胶，黏上背板</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8D%A2%E7%94%B5%E3%81%AEStep-five"><span class="nav-number">5.</span> <span class="nav-text">换电のStep five</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E8%BF%9E%E6%8E%A5%E6%8E%92%E7%BA%BF%EF%BC%8C%E9%94%81%E4%B8%8A%E8%9E%BA%E4%B8%9D%EF%BC%8C%E8%B4%B4%E4%B8%8A%E5%B1%8F%E5%B9%95%E8%83%B6%EF%BC%8C%E9%80%86%E5%BA%8F%E8%A3%85%E6%9C%BA"><span class="nav-number">5.1.</span> <span class="nav-text">重新连接排线，锁上螺丝，贴上屏幕胶，逆序装机</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA%E5%92%8C%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97"><span class="nav-number">6.</span> <span class="nav-text">结论和使用感受</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="blues"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">blues</p>
+  <div class="site-description" itemprop="description">Stay hungry, Stay foolish</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fas fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="blues">
+      <meta itemprop="description" content="Stay hungry, Stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A-CODE-WALL">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Iphone7の换电初体験
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-13 00:00:00" itemprop="dateCreated datePublished" datetime="2021-03-13T00:00:00+08:00">2021-03-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%A7%91%E6%8A%80%E6%95%B0%E7%A0%81/" itemprop="url" rel="index"><span itemprop="name">科技数码</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.1k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        
+
+<p>我的i7从使用到现在已经4年多了，他像一位老伙计一样，默默地陪伴着我，任劳任怨的受着我疯狂揉拧，眼见着他的身体逐渐被掏空（让我莫名想起了那个让男人看了都会流泪的广告），我内心很是不舍，所以这次决定给他更换一下零部件。该从哪里开始呢？当然是电池啦，好比男人的加油站（手动滑稽）。好了，回归正题，以下内容主要记录换电过程以及一些需要注意的点，还有换电之后的使用感受。</p>
+<div style="width:50%;height:50%;margin:auto"><img src="/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/b8583cfafdac4d4f906523fc22f3816f.jpg" class=""></div>
+
+<span id="more"></span>
+
+<h1 id="换电のStep-one"><a href="#换电のStep-one" class="headerlink" title="换电のStep one"></a>换电のStep one</h1><p><strong><em>！！！</em></strong> <strong><em>Attention</em></strong> ：换电的第一步理所当然会想到是拧下手机和背板连接的显式螺丝（位于充电口旁边的两颗梅花螺丝）对不对？答案是错误，请注意，<strong>“手机关机” 才是第一步</strong>。</p>
+<p>手机关机完毕了吧？那么可以开开心心的拧下两个梅花螺丝啦~</p>
+<p>like this ↓↓↓ （请无视图片上那骨瘦如柴的手，我只是穷得吃不起饭，不过还剩下一口气 XXD)</p>
+<div style="width:30%;height:30%;margin:auto"><img src="/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/62928d230b8808c7a0f00bb4591408d.jpg" class=""></div>
+
+<p><strong>Tips 1</strong>：在用螺丝刀拧下螺丝的时候，可以用螺丝刀的顶部抵住掌心作为支撑点，再用拇指和食指转动螺丝刀，这样做的好处在于不那么容易让螺丝滑牙，对于质量和精密度没那么好的螺丝刀来说。</p>
+<h1 id="换电のStep-two"><a href="#换电のStep-two" class="headerlink" title="换电のStep two"></a>换电のStep two</h1><h2 id="如何将屏幕和背板分离？"><a href="#如何将屏幕和背板分离？" class="headerlink" title="如何将屏幕和背板分离？"></a>如何将屏幕和背板分离？</h2><p>我们知道现在的手机屏幕和背板基本上是通过屏幕胶来黏合，我一直觉得这种组装方式对于拆机来说实在是有些麻烦和折腾，又一次感叹我的旧老友Iphone4s（Steve Jobs在世的最后一代产品）我就觉得那种组合模式很简单，对于拆装机来说，当然，你可以说它不支持防水（：</p>
+<p>因为没有专业的软化屏幕胶的仪器，我这边选择使用吹风机来软化屏幕胶：开启电吹风 [加热模式] 沿着下半屏的边缘来回的（吹啊吹啊我的骄傲放纵…)，这边请注意要均匀的加热，不要一直固定吹同一个位置，防止屏幕受热坏掉，加热个5-7分钟就可以趁着余温用吸盘将屏幕和背板拉起一个小缝隙，然后用翘片卡位，再用撬棒沿着缝隙慢慢的划开啦，是不是很简单？其实我在分离屏幕和背板这一步花了好长时间，屏幕顶部位置的卡扣和背板连接的太紧了，我也不敢使用蛮劲，怕拉断屏幕和背板连接的排线，那就完蛋啦！TAT</p>
+<h2 id="拧下螺丝，断开排线，彻底分离屏幕和背板"><a href="#拧下螺丝，断开排线，彻底分离屏幕和背板" class="headerlink" title="拧下螺丝，断开排线，彻底分离屏幕和背板"></a>拧下螺丝，断开排线，彻底分离屏幕和背板</h2><p>好了，已经可以掀开屏幕啦（终于看到老伙计的果照，有点小激动呢），但是请注意：<strong>屏幕排线和主板还连接着，你还必须得保持小心翼翼</strong>，在这里需要断开屏幕排线，电源排线，听筒排线。首先，需要先拧下固定电源排线上垫片的Y字螺丝（这里需要用到<strong>0.6的Y字螺丝刀</strong>，不要问我怎么知道的，有点小崩溃），接着，拧下固定听筒排线上的垫片的十字螺丝（这里需要用到<strong>十字螺丝刀</strong>），So Easy~，然后，用绝缘撬棒依次翘开这些排线连接，就大功告成啦，彻底分离屏幕和背板。</p>
+<p><strong>Tips 2</strong>：在翘开这些连接排线的时候请使用绝缘撬棒，防止导电之类的会将主板击穿，那可能会得不偿失！</p>
+<h1 id="换电のStep-three"><a href="#换电のStep-three" class="headerlink" title="换电のStep three"></a>换电のStep three</h1><h2 id="拆下震动模组，卸下电源"><a href="#拆下震动模组，卸下电源" class="headerlink" title="拆下震动模组，卸下电源"></a>拆下震动模组，卸下电源</h2><p>拆下震动模组的目的是为了更方便的拉掉电源胶，这里就不过多叙述了。震动模组拆下完毕，我们可以开始拔电源胶啦，好欢乐，这边首先是用不算太尖锐的武器戳开黏在电源上的电源胶开口，请小心，不要戳破电源了，这会很危险。然后就是水平的往外拉扯电源胶（这个步骤得重复三次），彻底执行完毕之后，电源和背板就算是彻底分离啦。</p>
+<p>当然，如果遇到不顺畅的拉胶过程该怎么办？比如说拉胶拉到一半，胶断了，这时候的解决方案如下：</p>
+<ul>
+<li>用电吹风加热背板后盖电源位置（<strong>不是直吹电源正面，是吹反面</strong>），然后稍微撑开电源和底板的缝隙，用镊子将断掉的电源胶拉扯出来。</li>
+<li>重新将手机按倒序组装回去，开机将电量用完，再暴力拆电源，当然暴力拆电源的时候也得小心。</li>
+</ul>
+<p>以上两种方案，我都没有尝试过，拉胶的过程还是蛮顺利的，假使遇到以上情况还是建议使用搜索引擎查找有无更合适的方案，安全第一。</p>
+<p><strong>Tips 3</strong>：在拉电源胶的过程中如果遇到拽不动的情况，可以试着左右拉动电源胶，这样可以使电源胶松动。</p>
+<p>彻底分离屏幕，电源，主板 ↓↓↓ </p>
+<div style="width:50%;height:50%;margin:auto"><img src="/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/ba265efade2c43d7ade4f93bd27eebfc.jpg" class=""></div>
+
+<h1 id="换电のStep-four"><a href="#换电のStep-four" class="headerlink" title="换电のStep four"></a>换电のStep four</h1><h2 id="拿出新电源，粘上新的电源胶，黏上背板"><a href="#拿出新电源，粘上新的电源胶，黏上背板" class="headerlink" title="拿出新电源，粘上新的电源胶，黏上背板"></a>拿出新电源，粘上新的电源胶，黏上背板</h2><p>给新电源粘上新电源胶的时候可以先固定电源胶的头部，再对齐黏到电源上，这一步<strong>请注意不要粘反了</strong>，黏到背板的时候可以先将电源排线稍微固定到接口（不用彻底插上电源排线）。我在将电源黏到背板的时候还是没有把握好上下的间距，这导致振动模组和电源的间隙过小，总感觉是这个原因导致现在手机震动的震感变强了（：</p>
+<h1 id="换电のStep-five"><a href="#换电のStep-five" class="headerlink" title="换电のStep five"></a>换电のStep five</h1><h2 id="重新连接排线，锁上螺丝，贴上屏幕胶，逆序装机"><a href="#重新连接排线，锁上螺丝，贴上屏幕胶，逆序装机" class="headerlink" title="重新连接排线，锁上螺丝，贴上屏幕胶，逆序装机"></a>重新连接排线，锁上螺丝，贴上屏幕胶，逆序装机</h2><p>重新连接排线的时候，需要确认排线是否有连接好，是否有松动的问题，否则后续在开机后可能会导致开机异常和功能异常等问题，锁上螺丝，贴上屏幕胶这些小步骤就不再叙述了，怎么拆机就怎么装回去，还是很简单的，需要注意锁完螺丝后不要心急的将屏幕和背板扣紧，可以开机试完大致的手机功能都无异常之后再扣上屏幕和背板就大功告成了！</p>
+<h1 id="结论和使用感受"><a href="#结论和使用感受" class="headerlink" title="结论和使用感受"></a>结论和使用感受</h1><p>对我来说，这是我首次给iphone换电的经历，我莫名的很享受这种硬件拆装的过程，总觉得将一个硬件由完整到拆分再到完整的过程带来的感觉很奇妙，这也是为什么我不把这种”麻烦事“交给专业的人来做的原因吧，其实这些很简单，对于很多人来说，只需要”胆大，心细“，我相信你也可以做到。已经装机使用一段时间了，总体感受，电池又耐用起来了，我的老伙计又回来啦，我们又可以一起度过接下去的一年或者是两年了，辛苦你了，哈哈哈~</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>blues
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/" title="Iphone7の换电初体験">http://example.com/2021/03/13/Iphone7の换电初体験/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Iphone/" rel="tag"># Iphone</a>
+          </div>
+
+        
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">blues</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
