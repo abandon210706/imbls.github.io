@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CAmatic+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="在2021年1月1日，我写下了[2020の备忘录]，同时也定下2021年需要完成的事项，其中之一就是「搭建个人博客，学习写作记录」。现在，2021年已经过了三分之一（不经感叹，时间真的过得好快），「博客」这件小事也算是初具雏形，那么就简单记录Hexo博客搭建的过程以及后续优化博客的待办事项吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客搭建的简单记录和待办事项">
+<meta property="og:url" content="http://example.com/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/index.html">
+<meta property="og:site_name" content="A-CODE-WALL">
+<meta property="og:description" content="在2021年1月1日，我写下了[2020の备忘录]，同时也定下2021年需要完成的事项，其中之一就是「搭建个人博客，学习写作记录」。现在，2021年已经过了三分之一（不经感叹，时间真的过得好快），「博客」这件小事也算是初具雏形，那么就简单记录Hexo博客搭建的过程以及后续优化博客的待办事项吧。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/2e9fea24189f4d1b96965d44c105b431.jpg">
+<meta property="article:published_time" content="2021-03-28T08:53:31.000Z">
+<meta property="article:modified_time" content="2021-04-03T16:11:04.769Z">
+<meta property="article:author" content="blues">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/2e9fea24189f4d1b96965d44c105b431.jpg">
+
+
+<link rel="canonical" href="http://example.com/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>Hexo博客搭建的简单记录和待办事项 | A-CODE-WALL</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="A-CODE-WALL" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">A-CODE-WALL</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E9%80%89%E6%8B%A9"><span class="nav-number">1.</span> <span class="nav-text">博客选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">搭建环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">搭建过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">3.1.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">3.2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">3.3.</span> <span class="nav-text">Hexo常用的命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#init"><span class="nav-number">3.3.1.</span> <span class="nav-text">init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new"><span class="nav-number">3.3.2.</span> <span class="nav-text">new</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate"><span class="nav-number">3.3.3.</span> <span class="nav-text">generate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#publish"><span class="nav-number">3.3.4.</span> <span class="nav-text">publish</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#server"><span class="nav-number">3.3.5.</span> <span class="nav-text">server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deploy"><span class="nav-number">3.3.6.</span> <span class="nav-text">deploy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clean"><span class="nav-number">3.3.7.</span> <span class="nav-text">clean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debug-mode"><span class="nav-number">3.3.8.</span> <span class="nav-text">Debug mode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98"><span class="nav-number">3.4.</span> <span class="nav-text">更换Hexo主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98"><span class="nav-number">3.4.1.</span> <span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="nav-number">3.4.2.</span> <span class="nav-text">配置主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.5.</span> <span class="nav-text">使用的第三方服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-deployer-git"><span class="nav-number">3.5.1.</span> <span class="nav-text">hexo-deployer-git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.5.1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">3.5.1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2"><span class="nav-number">3.5.1.3.</span> <span class="nav-text">部署</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-generator-feed"><span class="nav-number">3.5.2.</span> <span class="nav-text">hexo-generator-feed</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-number">3.5.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-1"><span class="nav-number">3.5.2.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90"><span class="nav-number">3.5.2.3.</span> <span class="nav-text">生成</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-generator-searchdb"><span class="nav-number">3.5.3.</span> <span class="nav-text">hexo-generator-searchdb</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-2"><span class="nav-number">3.5.3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-2"><span class="nav-number">3.5.3.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90-1"><span class="nav-number">3.5.3.3.</span> <span class="nav-text">生成</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-word-counter"><span class="nav-number">3.5.4.</span> <span class="nav-text">hexo-word-counter</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-3"><span class="nav-number">3.5.4.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-3"><span class="nav-number">3.5.4.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90-2"><span class="nav-number">3.5.4.3.</span> <span class="nav-text">生成</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88"><span class="nav-number">3.6.</span> <span class="nav-text">博客部署方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.7.</span> <span class="nav-text">优化博客的待办事项</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="blues"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">blues</p>
+  <div class="site-description" itemprop="description">Stay hungry, Stay foolish</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fas fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="blues">
+      <meta itemprop="description" content="Stay hungry, Stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A-CODE-WALL">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo博客搭建的简单记录和待办事项
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-28 16:53:31" itemprop="dateCreated datePublished" datetime="2021-03-28T16:53:31+08:00">2021-03-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        
+
+<p>在2021年1月1日，我写下了[2020の备忘录]，同时也定下2021年需要完成的事项，其中之一就是「搭建个人博客，学习写作记录」。现在，2021年已经过了三分之一（不经感叹，时间真的过得好快），「博客」这件小事也算是初具雏形，那么就简单记录Hexo博客搭建的过程以及后续优化博客的待办事项吧。</p>
+<div style="width:50%;height:50%;margin:auto"><img src="/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/2e9fea24189f4d1b96965d44c105b431.jpg" class=""></div>
+
+<span id="more"></span>
+
+<h1 id="博客选择"><a href="#博客选择" class="headerlink" title="博客选择"></a>博客选择</h1><ul>
+<li>第三方博客平台</li>
+<li>自建博客<ul>
+<li>Halo</li>
+<li>Hexo</li>
+</ul>
+</li>
+</ul>
+<p>博客的选择分成两类，一类是直接使用第三方博客平台，优点是拿来即用，只需要关注内容输出，并且博客平台相当于是社区，撰写的文章更容易被别人阅读，相应的也更容易建立个人IP，缺点是文章内容是依托于第三方平台，不能完全掌控博客（最近，博客园被暂停使用，进行内容审查，像遇到这种事情的时候，就只能束手无策）。</p>
+<p>另外一类是自建博客，分为动态博客和静态博客，动态博客，大概了解了Java语言实现的Halo博客，整体上搭建还是很简单方便的，有对应的后台系统以及整合了第三方插件，省心，不需要太多的折腾；静态博客，轻量级的Hexo博客，网络上有足够多的搭建教程，可玩性高，但是会比较折腾（：</p>
+<p>我最终选择使用Hexo来自建博客。一步步的完善，优化博客的过程虽然会比较折腾，但是想想就让人激动！</p>
+<h1 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h1><ul>
+<li>Platform：Windows 10</li>
+<li>Node.js：v14.16.0（LTS）</li>
+<li>Version Control：Git</li>
+</ul>
+<h1 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h1><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>使用yarn安装hexo-cli：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn global add hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p><strong>Tips</strong>：一开始是按照官方文档的npm来安装hexo-cli，但在后续引入GitHub-Actions做自动化集成，部署的时候需要用yarn-cache，npm就不支持了，需要再将npm转换成yarn。还有就是我在查找yarn和npm的区别是发现<em>yarn在性能上比npm高</em>，此处具体的差异分析可以通过Google进一步了解。</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>初始化blog文件夹 -&gt; 进入文件夹 -&gt; yarn安装包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn install</span><br></pre></td></tr></table></figure>
+
+<p>初始化完成后，blog文件夹的目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── node_modules &#x2F;&#x2F;node模块</span><br><span class="line">├── scaffolds	&#x2F;&#x2F;模板文件夹</span><br><span class="line">|   ├── draft.md</span><br><span class="line">|   ├── page.md</span><br><span class="line">|   └── post.mad</span><br><span class="line">├── source	&#x2F;&#x2F;资源文件夹</span><br><span class="line">|   └── _posts	&#x2F;&#x2F;文章文件夹</span><br><span class="line">├── themes	&#x2F;&#x2F;主题文件夹</span><br><span class="line">├── .gitignore</span><br><span class="line">├── _config.landscape.yml	&#x2F;&#x2F;landscape主题配置文件</span><br><span class="line">├── _config.yml	&#x2F;&#x2F;hexo配置文件</span><br><span class="line">├── db.json</span><br><span class="line">├── package.json</span><br><span class="line">├── yarn.lock</span><br></pre></td></tr></table></figure>
+
+<p>启动hexo：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>如果使用的CMD命令行或是Git Bash显示如下信息，并且无ERROR报错，则表示搭建成功了，即可在浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></p>
+<blockquote>
+<p>INFO  Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> . Press Ctrl+C to stop.</p>
+</blockquote>
+<h2 id="Hexo常用的命令"><a href="#Hexo常用的命令" class="headerlink" title="Hexo常用的命令"></a>Hexo常用的命令</h2><h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
+
+<p>根据folder参数初始化站点文件夹，如果folder参数不提供，则在当前目录初始化。</p>
+<h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>创建文章，如果不提供layout参数，则会根据_config.yml配置文件下的default_layout参数所对应的值进行创建，title表示文件名即文章的标题，需要用””引用。</p>
+<p><strong>Tips</strong>：layout有对应的模板文件，可以修改post模板来生成统一的文章的整体结构。</p>
+<table>
+<thead>
+<tr>
+<th>可选参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p，–path</td>
+<td>定制化文章的生成路径</td>
+</tr>
+<tr>
+<td>-r，–replace</td>
+<td>如果文章已存在，则会替换</td>
+</tr>
+<tr>
+<td>-s，–slug</td>
+<td>定制化文章的URL</td>
+</tr>
+</tbody></table>
+<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>在public文件夹下生成静态文件，使用<code>hexo g</code>也可以触发。</p>
+<table>
+<thead>
+<tr>
+<th>可选参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-d，–deploy</td>
+<td>生成静态文件并部署</td>
+</tr>
+<tr>
+<td>-w，–watch</td>
+<td>监视文件的变化</td>
+</tr>
+<tr>
+<td>-b，–bail</td>
+<td>在生成静态文件的过程中有任何未处理异常，则引发错误</td>
+</tr>
+<tr>
+<td>-f，–force</td>
+<td>强制重新生成静态文件</td>
+</tr>
+<tr>
+<td>-c，–concurrency</td>
+<td>并行生成静态文件</td>
+</tr>
+</tbody></table>
+<h3 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+
+<p>发布草稿文件，可先使用draft模板编写文章，再本地启动查看效果ok后，再将草稿文章进行发布。</p>
+<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>启动本地服务，使用<code>hexo s</code>也能触发，默认浏览器路径是<a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
+<table>
+<thead>
+<tr>
+<th>可选参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p，–port</td>
+<td>当4000端口被占用的时候，重写默认的端口号</td>
+</tr>
+<tr>
+<td>-s，–static</td>
+<td>只启动静态文件</td>
+</tr>
+<tr>
+<td>-l，–log</td>
+<td>开启日志</td>
+</tr>
+</tbody></table>
+<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署站点，使用<code>hexo d</code>也能触发。</p>
+<table>
+<thead>
+<tr>
+<th>可选参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-g，–generate</td>
+<td>在部署生成静态文件</td>
+</tr>
+</tbody></table>
+<h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>清除缓存文件（<code>db.json</code>）和已经生成的静态文件（<code>public</code>）。</p>
+<h3 id="Debug-mode"><a href="#Debug-mode" class="headerlink" title="Debug mode"></a>Debug mode</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo --debug</span><br></pre></td></tr></table></figure>
+
+<p>开启调试模式，这个命令在更新主题配置的时候可以使用，省去重新启动服务。</p>
+<h2 id="更换Hexo主题"><a href="#更换Hexo主题" class="headerlink" title="更换Hexo主题"></a>更换Hexo主题</h2><p>Hexo提供了丰富的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题库</a>，我目前使用的主题是<strong>NexT</strong>。</p>
+<h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>修改blog/_config.yml</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+<p>启动Hexo，查看主题是否生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s --debug</span><br></pre></td></tr></table></figure>
+
+<p>具体的主题详细配置就不再说明，可查看yaml的注释也可查看<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/">Next官方文档</a>。</p>
+<h2 id="使用的第三方服务"><a href="#使用的第三方服务" class="headerlink" title="使用的第三方服务"></a>使用的第三方服务</h2><h3 id="hexo-deployer-git"><a href="#hexo-deployer-git" class="headerlink" title="hexo-deployer-git"></a>hexo-deployer-git</h3><blockquote>
+<p>Git deployer plugin for Hexo.</p>
+</blockquote>
+<p>可一键部署到GitHub仓库的第三方Hexo插件，结合GitHub-Pages可方便在github.io上托管博客。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>编辑hexo/_config.yml</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  #仓库地址</span><br><span class="line">  repo: &lt;repository url&gt; # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span><br><span class="line">  #分支，GitHub默认提交到gh-pages分支</span><br><span class="line">  branch: [branch]</span><br><span class="line">  #提交信息，默认信息：Site updated: &#123;&#123; now(&#x27;YYYY-MM-DD HH:mm:ss&#x27;) &#125;&#125;</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure>
+
+<p>具体文档：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">https://github.com/hexojs/hexo-deployer-git</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment">https://hexo.io/docs/one-command-deployment</a></li>
+</ul>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="hexo-generator-feed"><a href="#hexo-generator-feed" class="headerlink" title="hexo-generator-feed"></a>hexo-generator-feed</h3><blockquote>
+<p>Generate Atom 1.0 or RSS 2.0 feed.</p>
+</blockquote>
+<p>生成Atom或者RSS的第三方插件，为站点提供RSS订阅。</p>
+<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add hexo-generator-feed</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h4><p>编辑hexo/_config.yml</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#开启feed</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span> <span class="comment">#feed类型，默认atom，支持atom和rss2，可同时支持两种类型</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span> <span class="comment">#路径，默认在/hexo下生成</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span>	<span class="comment">#feed.xml限制的最大posts文章数</span></span><br><span class="line">  <span class="attr">hub:</span></span><br><span class="line">  <span class="attr">content:</span> <span class="comment">#可选参数，&#x27;true&#x27;表示feed.xml中会包含文章内容在全部post下</span></span><br><span class="line">  <span class="attr">content_limit:</span> <span class="number">140</span></span><br><span class="line">  <span class="attr">content_limit_delim:</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span> <span class="comment">#排序</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">icon.png</span> <span class="comment">#自定义feed图标</span></span><br><span class="line">  <span class="attr">autodiscovery:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">template:</span></span><br></pre></td></tr></table></figure>
+
+<p>具体文档：<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">https://github.com/hexojs/hexo-generator-feed</a></p>
+<h4 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"><span class="comment"># 在public静态资源文件夹下生成feed对应的xml文件</span></span><br></pre></td></tr></table></figure>
+
+<p>结合next/_config.yml配置，可在sidebar的social栏下提供RSS订阅</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="comment"># GitHub: https://github.com/yourname || fab fa-github</span></span><br><span class="line">  <span class="comment"># E-Mail: mailto:yourname@gmail.com || fa fa-envelope</span></span><br><span class="line">  <span class="attr">RSS:</span> <span class="string">/atom.xml</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-rss</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="hexo-generator-searchdb"><a href="#hexo-generator-searchdb" class="headerlink" title="hexo-generator-searchdb"></a>hexo-generator-searchdb</h3><blockquote>
+<p>Seach data generator plugin for Hexo.</p>
+</blockquote>
+<p>搜索数据生成组件，为hexo博客提供搜索功能。</p>
+<h4 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add hexo-generator-searchdb</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h4><p>编辑hexo/_config.yml</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span> <span class="comment">#是否包含搜索文章内容</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br></pre></td></tr></table></figure>
+
+<p>具体文档：<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-generator-searchdb">https://github.com/theme-next/hexo-generator-searchdb</a></p>
+<h4 id="生成-1"><a href="#生成-1" class="headerlink" title="生成"></a>生成</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"><span class="comment"># 在public静态资源文件夹下生成search.xml文件</span></span><br></pre></td></tr></table></figure>
+
+<p>结合next/_config.yml配置，可在菜单栏下生成搜索栏目。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="hexo-word-counter"><a href="#hexo-word-counter" class="headerlink" title="hexo-word-counter"></a>hexo-word-counter</h3><blockquote>
+<p>Symbols count and time to read for articles in Hexo blog.</p>
+</blockquote>
+<p>统计博客文章的字数和计算阅读时长。</p>
+<h4 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add hexo-word-counter</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置-3"><a href="#配置-3" class="headerlink" title="配置"></a>配置</h4><p>编辑hexo/_config.yml</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment">#是否显示字数统计</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span> <span class="comment">#是否显示阅读时长</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span> <span class="comment">#是否显示站点总字数</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span> <span class="comment">#是否显示站点阅读时长</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">false</span> <span class="comment">#是否排除code代码块的字数计算</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">4</span> <span class="comment">#平均字长，CN≈2，EN≈5，RU≈6</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span> <span class="comment">#每分钟字数，Slow≈200，Normal≈275，Fast≈350</span></span><br><span class="line">  <span class="attr">suffix:</span> <span class="string">&quot;mins.&quot;</span> <span class="comment">#阅读时长的后缀定义</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="生成-2"><a href="#生成-2" class="headerlink" title="生成"></a>生成</h4><p>运行<code>hexo s</code>查看本地环境下的文章是否有显示字数统计和阅读时长。</p>
+<h2 id="博客部署方案"><a href="#博客部署方案" class="headerlink" title="博客部署方案"></a>博客部署方案</h2><p>博客在创建初期就构想了需要具备的功能：</p>
+<ul>
+<li>方便将博客源码迁移到其他电脑上，应急情况下不需要繁琐的配置就能在其他电脑上撰写博客。</li>
+<li>能够做到源码同步，自动化的构建，部署。</li>
+</ul>
+<p>基于以上的需求，我使用GitHub来管理，备份博客源码，至于自动化部署在实现上的方案，在查找了以下几种方案：</p>
+<ol>
+<li><p>使用GitHub-Pages结合hexo-deployer-git组件在github.io上部署博客。</p>
+</li>
+<li><p>使用GitHub-Webhooks，再自己实现钩子脚本将博客部署到VPS。</p>
+</li>
+<li><p>使用GitHub-Actions来实现持续集成，部署到VPS。</p>
+</li>
+</ol>
+<p>我采用了GitHub-Acitions来做一键部署博客的事情，感觉GitHub-Actions可玩性更高，也更适合做持续集成的事情，目前已经达成：只需要将博客源码提交到GitHub就能触发持续集成，将博客进行备份，且部署到VPS上，后续只需要查看站点的效果即可，我在后面会再详细记录目前采用的博客持续集成方案。</p>
+<h2 id="优化博客的待办事项"><a href="#优化博客的待办事项" class="headerlink" title="优化博客的待办事项"></a>优化博客的待办事项</h2><ul>
+<li><input disabled="" type="checkbox"> 优化站点的图片显示速度</li>
+<li><input disabled="" type="checkbox"> 站点的域名绑定及HTTPS访问</li>
+<li><input disabled="" type="checkbox"> 提供博客的评论功能</li>
+<li><input disabled="" type="checkbox"> 设置站点的SEO</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>blues
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/" title="Hexo博客搭建的简单记录和待办事项">http://example.com/2021/03/28/Hexo博客搭建的简单记录和待办事项/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/blog/" rel="tag"># blog</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/13/Iphone7%E3%81%AE%E6%8D%A2%E7%94%B5%E5%88%9D%E4%BD%93%E9%A8%93/" rel="prev" title="Iphone7の换电初体験">
+                  <i class="fa fa-chevron-left"></i> Iphone7の换电初体験
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">blues</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+    <div class="pjax">
+
+
+    </div>
+<script src="/node_modules/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"node_modules/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/node_modules/assets/shizuku.model.json"},"display":{"position":"left","width":190,"height":380},"mobile":{"show":false},"react":{"opacity":0.9},"log":false});</script></body>
+</html>
