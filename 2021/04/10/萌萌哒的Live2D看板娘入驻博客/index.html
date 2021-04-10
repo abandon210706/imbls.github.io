@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CAmatic+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="自从把博客搭建好之后，就开始在捣腾博客的路上越走越远，想像着怎么让博客越来越精美，尽量保持简约的风格，但又不失有一些活泼的元素存在，不至于整个博客的风格太过于冷色调（喂！博客的重点在于内容啊，是不是本末倒置了？），emmm····，但是赏心悦目的博客才能保持足够的写作动力啊！（借口） 某天闲暇之余在逛博客的时候，发现别人的博客底下有这么个可爱的二次元小萝莉，一下子就喜欢上了，查阅了资料发现这叫“看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="萌萌哒的Live2D看板娘入驻博客">
+<meta property="og:url" content="http://example.com/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="A-CODE-WALL">
+<meta property="og:description" content="自从把博客搭建好之后，就开始在捣腾博客的路上越走越远，想像着怎么让博客越来越精美，尽量保持简约的风格，但又不失有一些活泼的元素存在，不至于整个博客的风格太过于冷色调（喂！博客的重点在于内容啊，是不是本末倒置了？），emmm····，但是赏心悦目的博客才能保持足够的写作动力啊！（借口） 某天闲暇之余在逛博客的时候，发现别人的博客底下有这么个可爱的二次元小萝莉，一下子就喜欢上了，查阅了资料发现这叫“看">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/3d76ded499c111eba8b30242ac130003.png">
+<meta property="og:image" content="http://example.com/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/67a6eb5a99d411eba8b30242ac130003.png">
+<meta property="og:image" content="http://example.com/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/ad04afa899dd11eba8b30242ac130003.png">
+<meta property="article:published_time" content="2021-04-10T05:49:22.000Z">
+<meta property="article:modified_time" content="2021-04-10T10:02:34.490Z">
+<meta property="article:author" content="blues">
+<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Live2D">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/3d76ded499c111eba8b30242ac130003.png">
+
+
+<link rel="canonical" href="http://example.com/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/">
+
+
+<script data-pjax class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>萌萌哒的Live2D看板娘入驻博客 | A-CODE-WALL</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="A-CODE-WALL" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">A-CODE-WALL</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2"><span class="nav-number">1.</span> <span class="nav-text">Live2D看板娘入驻博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E5%BC%95%E5%85%A5%E7%9C%8B%E6%9D%BF%E5%A8%98%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.</span> <span class="nav-text">博客页面引入看板娘依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Live2D-Widget"><span class="nav-number">1.1.1.</span> <span class="nav-text">Live2D Widget</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.2.</span> <span class="nav-text">博客页面添加依赖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BB%84%E4%BB%B6%E5%BC%95%E5%85%A5%E7%9C%8B%E6%9D%BF%E5%A8%98"><span class="nav-number">1.2.</span> <span class="nav-text">Hexo第三方组件引入看板娘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-helper-live2d"><span class="nav-number">1.2.1.</span> <span class="nav-text">hexo-helper-live2d</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8hexo-helper-live2d%E7%BB%84%E4%BB%B6%E5%BC%95%E5%85%A5%E7%9C%8B%E6%9D%BF%E5%A8%98%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">1.2.2.</span> <span class="nav-text">使用hexo-helper-live2d组件引入看板娘的步骤如下：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDhexo-helper-live2d%E7%BB%84%E4%BB%B6"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">下载hexo-helper-live2d组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDlive2d-model%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">下载live2d-model模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">修改配置文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%BC%95%E5%85%A5%E7%9C%8B%E6%9D%BF%E5%A8%98%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">1.3.</span> <span class="nav-text">两种方式引入看板娘的对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%85%A5PJAX%E5%B1%80%E9%83%A8%E5%88%B7%E6%96%B0%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.4.</span> <span class="nav-text">引入PJAX局部刷新博客页面</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="blues"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">blues</p>
+  <div class="site-description" itemprop="description">Stay hungry, Stay foolish</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fas fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="blues">
+      <meta itemprop="description" content="Stay hungry, Stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A-CODE-WALL">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          萌萌哒的Live2D看板娘入驻博客
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-10 13:49:22" itemprop="dateCreated datePublished" datetime="2021-04-10T13:49:22+08:00">2021-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        
+
+<p>自从把博客搭建好之后，就开始在捣腾博客的路上越走越远，想像着怎么让博客越来越精美，尽量保持简约的风格，但又不失有一些活泼的元素存在，不至于整个博客的风格太过于冷色调（喂！博客的重点在于内容啊，是不是本末倒置了？），emmm····，<del>但是赏心悦目的博客才能保持足够的写作动力啊！</del>（借口）</p>
+<p>某天闲暇之余在逛博客的时候，发现别人的博客底下有这么个可爱的二次元小萝莉，一下子就喜欢上了，查阅了资料发现这叫<strong>“看板娘”</strong>，想像着我的博客底下也有一个萌萌哒的看板娘陪伴着，那真是太幸福了，就决定将看板娘抱回家（：</p>
+<div style="margin:auto"><img src="/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/3d76ded499c111eba8b30242ac130003.png" class=""></div>
+
+<span id="more"></span>
+
+<h1 id="Live2D看板娘入驻博客"><a href="#Live2D看板娘入驻博客" class="headerlink" title="Live2D看板娘入驻博客"></a>Live2D看板娘入驻博客</h1><p>研究了下如何将看板娘引入博客，对于博客小白来说，还挺简单的，以下是两种方式：</p>
+<ul>
+<li>在博客页面引入看板娘代码依赖。</li>
+<li>使用Hexo第三方组件引入。</li>
+</ul>
+<h2 id="博客页面引入看板娘依赖"><a href="#博客页面引入看板娘依赖" class="headerlink" title="博客页面引入看板娘依赖"></a>博客页面引入看板娘依赖</h2><h3 id="Live2D-Widget"><a href="#Live2D-Widget" class="headerlink" title="Live2D Widget"></a>Live2D Widget</h3><p>Live2D Widget的作者们将看板娘的源代码开源在GitHub上，在阅读了文档后发现，对于小白来说使用非常的简单，只需要2行代码即可。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>将以上两行代码加入到博客页面的<code>&lt;head&gt;&lt;/head&gt;</code>标签内，即可拥有官方提供的看板娘，当然，如果要对看板娘进行定制化就没那么简单啦。</p>
+<h3 id="博客页面添加依赖"><a href="#博客页面添加依赖" class="headerlink" title="博客页面添加依赖"></a>博客页面添加依赖</h3><p>/themes/next/layout/_layout.njk</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;&#123;&#123; page.lang &#125;&#125;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  &#123;&#123; partial(&#x27;_partials/head/head.njk&#x27;, &#123;&#125;, &#123;cache: theme.cache.enable&#125;) &#125;&#125;</span><br><span class="line">  &#123;%- include &#x27;_partials/head/head-unique.njk&#x27; -%&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;% block title %&#125;&#123;% endblock %&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  &#123;&#123; partial(&#x27;_third-party/analytics/index.njk&#x27;, &#123;&#125;, &#123;cache: theme.cache.enable&#125;) &#125;&#125;</span><br><span class="line">  &#123;&#123; partial(&#x27;_scripts/noscript.njk&#x27;, &#123;&#125;, &#123;cache: theme.cache.enable&#125;) &#125;&#125;</span><br><span class="line">  <span class="comment">&lt;!-- 添加看板娘依赖 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>添加依赖后重新启动博客，即可看到看板娘↓↓↓</p>
+<div style="margin:auto"><img src="/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/67a6eb5a99d411eba8b30242ac130003.png" class=""></div>
+
+<p>具体更详细的配置可查看GitHub上的<a target="_blank" rel="noopener" href="https://github.com/stevenjoezhang/live2d-widget">官方文档</a>。</p>
+<h2 id="Hexo第三方组件引入看板娘"><a href="#Hexo第三方组件引入看板娘" class="headerlink" title="Hexo第三方组件引入看板娘"></a>Hexo第三方组件引入看板娘</h2><h3 id="hexo-helper-live2d"><a href="#hexo-helper-live2d" class="headerlink" title="hexo-helper-live2d"></a>hexo-helper-live2d</h3><h3 id="使用hexo-helper-live2d组件引入看板娘的步骤如下："><a href="#使用hexo-helper-live2d组件引入看板娘的步骤如下：" class="headerlink" title="使用hexo-helper-live2d组件引入看板娘的步骤如下："></a>使用hexo-helper-live2d组件引入看板娘的步骤如下：</h3><h4 id="下载hexo-helper-live2d组件"><a href="#下载hexo-helper-live2d组件" class="headerlink" title="下载hexo-helper-live2d组件"></a>下载hexo-helper-live2d组件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<h4 id="下载live2d-model模型"><a href="#下载live2d-model模型" class="headerlink" title="下载live2d-model模型"></a>下载live2d-model模型</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add live2d-widget-model-shizuku</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>hexo/_config.yml</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否启用live2d</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">node_modules/</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">debug:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-shizuku</span> <span class="comment">#下载的模型名称</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">left</span> <span class="comment">#模型显示位置</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">190</span> <span class="comment">#模型显示宽度</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">380</span> <span class="comment">#模型显示高度</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">false</span> <span class="comment">#移动端是否显示模型</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.9</span> <span class="comment">#模型透明度</span></span><br></pre></td></tr></table></figure>
+
+<p>详细的配置参数说明可查看<a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d">官方文档</a>。</p>
+<p>重启博客，就可以看到萌萌哒的看板娘啦↓↓↓</p>
+<div style="margin:auto"><img src="/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/ad04afa899dd11eba8b30242ac130003.png" class=""></div>
+
+<h2 id="两种方式引入看板娘的对比"><a href="#两种方式引入看板娘的对比" class="headerlink" title="两种方式引入看板娘的对比"></a>两种方式引入看板娘的对比</h2><p>PS：<em>以下只是在以官方提供的简易引入方式的情况下的对比</em></p>
+<ol>
+<li><p>Live2D Widget</p>
+<p>优点：</p>
+<ul>
+<li>看板娘支持更多的功能：切换模型/换装/游戏/拍照/隐藏；</li>
+<li>适配度更高，可支持更多的应用场景；</li>
+</ul>
+<p>不足：</p>
+<ul>
+<li>无法自定义看板娘的展示位置，大小；</li>
+</ul>
+</li>
+<li><p>hexo-helper-live2d</p>
+<p>优点：</p>
+<ul>
+<li>可以自定义看板娘的展示位置等参数；</li>
+</ul>
+<p>不足：</p>
+<ul>
+<li>对于更换看板娘模型需要下载新的包，并重新配置；</li>
+<li>组件只支持Hexo博客；</li>
+</ul>
+</li>
+</ol>
+<p>因为我发现Live2D Widget引入的看板娘模型，在小分辨率的屏幕下显示占比较大，而且我更喜欢看板娘静静的那种感觉，不需要太多的交互；这些需求在hexo-helper-live2d组件上刚好满足了，所有采用hexo-helper-live2d引入看板娘。</p>
+<p>当然，如果有更高的定制化需求，基于GitHub开放的源码进行定制化开发是最合适的方式了，在此也要感谢开源作者们的开源精神才能让大家都能更方便的拥有萌萌哒的看板娘，Respect！</p>
+<h2 id="引入PJAX局部刷新博客页面"><a href="#引入PJAX局部刷新博客页面" class="headerlink" title="引入PJAX局部刷新博客页面"></a>引入PJAX局部刷新博客页面</h2><p>在引入看板娘后，发现每当点击侧边导航栏后会跳转到新的页面，并重新刷新整个博客页面，这就导致了萌萌哒的看板娘又重新显示一遍。一想到萌萌哒的看板娘的微笑被我操作博客的动作给<strong>剥夺</strong>了（夸装），想想都是满满负罪感，这时候就需要让博客支持局部刷新，刚好<strong>Next主题</strong>已经对PJAX进行组合封装了，只需要配置就能让博客支持局部刷新，配置如下：</p>
+<p>next/_config.yml</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Easily enable fast Ajax navigation on your website.</span></span><br><span class="line"><span class="comment"># For more information: https://github.com/next-theme/pjax</span></span><br><span class="line"><span class="attr">pjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>重新启动博客，博客就具备局部刷新的功能了，萌萌哒的看板娘的微笑被我守护下了XDD</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>blues
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/" title="萌萌哒的Live2D看板娘入驻博客">http://example.com/2021/04/10/萌萌哒的Live2D看板娘入驻博客/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Blog/" rel="tag"># Blog</a>
+              <a href="/tags/Live2D/" rel="tag"># Live2D</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/" rel="prev" title="Hexo博客搭建的简单记录和待办事项">
+                  <i class="fa fa-chevron-left"></i> Hexo博客搭建的简单记录和待办事项
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">blues</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+    <div class="pjax">
+
+
+    </div>
+<script src="/node_modules/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"node_modules/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/node_modules/assets/shizuku.model.json"},"display":{"position":"left","width":190,"height":380},"mobile":{"show":false},"react":{"opacity":0.9},"log":false});</script></body>
+</html>

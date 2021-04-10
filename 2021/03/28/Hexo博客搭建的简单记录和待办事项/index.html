@@ -33,10 +33,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/2e9fea24189f4d1b96965d44c105b431.jpg">
 <meta property="article:published_time" content="2021-03-28T08:53:31.000Z">
-<meta property="article:modified_time" content="2021-04-03T16:11:04.769Z">
+<meta property="article:modified_time" content="2021-04-10T10:02:34.466Z">
 <meta property="article:author" content="blues">
 <meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="blog">
+<meta property="article:tag" content="Blog">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/03/28/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%B0%E5%BD%95%E5%92%8C%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9/2e9fea24189f4d1b96965d44c105b431.jpg">
 
@@ -207,7 +207,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -220,7 +220,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -345,13 +345,13 @@
 
 <p><strong>Tips</strong>：一开始是按照官方文档的npm来安装hexo-cli，但在后续引入GitHub-Actions做自动化集成，部署的时候需要用yarn-cache，npm就不支持了，需要再将npm转换成yarn。还有就是我在查找yarn和npm的区别是发现<em>yarn在性能上比npm高</em>，此处具体的差异分析可以通过Google进一步了解。</p>
 <h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>初始化blog文件夹 -&gt; 进入文件夹 -&gt; yarn安装包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init hexo</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn install</span><br></pre></td></tr></table></figure>
 
-<p>初始化完成后，blog文件夹的目录如下：</p>
+<p>初始化完成后，hexo文件夹的目录如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── node_modules &#x2F;&#x2F;node模块</span><br><span class="line">├── scaffolds	&#x2F;&#x2F;模板文件夹</span><br><span class="line">|   ├── draft.md</span><br><span class="line">|   ├── page.md</span><br><span class="line">|   └── post.mad</span><br><span class="line">├── source	&#x2F;&#x2F;资源文件夹</span><br><span class="line">|   └── _posts	&#x2F;&#x2F;文章文件夹</span><br><span class="line">├── themes	&#x2F;&#x2F;主题文件夹</span><br><span class="line">├── .gitignore</span><br><span class="line">├── _config.landscape.yml	&#x2F;&#x2F;landscape主题配置文件</span><br><span class="line">├── _config.yml	&#x2F;&#x2F;hexo配置文件</span><br><span class="line">├── db.json</span><br><span class="line">├── package.json</span><br><span class="line">├── yarn.lock</span><br></pre></td></tr></table></figure>
 
 <p>启动hexo：</p>
@@ -467,11 +467,11 @@
 
 <p>开启调试模式，这个命令在更新主题配置的时候可以使用，省去重新启动服务。</p>
 <h2 id="更换Hexo主题"><a href="#更换Hexo主题" class="headerlink" title="更换Hexo主题"></a>更换Hexo主题</h2><p>Hexo提供了丰富的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题库</a>，我目前使用的主题是<strong>NexT</strong>。</p>
-<h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
+<h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
-<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>修改blog/_config.yml</p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>修改hexo/_config.yml</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
 
 <p>启动Hexo，查看主题是否生效</p>
@@ -582,7 +582,7 @@
 
           <div class="post-tags">
               <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-              <a href="/tags/blog/" rel="tag"># blog</a>
+              <a href="/tags/Blog/" rel="tag"># Blog</a>
           </div>
 
         
@@ -594,6 +594,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/04/10/%E8%90%8C%E8%90%8C%E5%93%92%E7%9A%84Live2D%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%85%A5%E9%A9%BB%E5%8D%9A%E5%AE%A2/" rel="next" title="萌萌哒的Live2D看板娘入驻博客">
+                  萌萌哒的Live2D看板娘入驻博客 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
